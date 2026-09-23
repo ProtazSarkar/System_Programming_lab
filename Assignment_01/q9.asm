@@ -1,0 +1,25 @@
+DATA SEGMENT
+    PROMPT DB 13, 10, 'Continue? (Y/N): $'
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+ASK:
+    LEA DX, PROMPT
+    MOV AH, 09H
+    INT 21H
+    MOV AH, 01H
+    INT 21H
+    CMP AL, 'Y'
+    JE ASK
+    CMP AL, 'y'
+    JE ASK
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

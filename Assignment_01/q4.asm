@@ -1,0 +1,20 @@
+DATA SEGMENT
+    ARRAY DW 10, 25, 7, 40, 18
+    COUNT EQU 5
+    MSG DB 'Second max and second min calculated.$'
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+    LEA DX, MSG
+    MOV AH, 09H
+    INT 21H
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

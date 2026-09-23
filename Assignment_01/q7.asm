@@ -1,0 +1,28 @@
+DATA SEGMENT
+    FIRST DW 20
+    SECOND DW 10
+    LESS_MSG DB 'Second number is less than first.$'
+    NOT_LESS_MSG DB 'Second number is not less than first.$'
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+    MOV AX, SECOND
+    CMP AX, FIRST
+    JAE NOT_LESS
+    LEA DX, LESS_MSG
+    JMP DISPLAY
+NOT_LESS:
+    LEA DX, NOT_LESS_MSG
+DISPLAY:
+    MOV AH, 09H
+    INT 21H
+    MOV AH, 4CH
+    INT 21H
+
+CODE ENDS
+END START

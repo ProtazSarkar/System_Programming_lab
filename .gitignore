@@ -1,0 +1,30 @@
+# Ignore everything by default.
+*
+
+# Keep the repository metadata.
+!.gitignore
+
+# Assignment 01: keep only the runner and q1-q10 source files.
+!Assignment_01/
+Assignment_01/*
+!Assignment_01/run.py
+!Assignment_01/q1.asm
+!Assignment_01/q2.asm
+!Assignment_01/q3.asm
+!Assignment_01/q4.asm
+!Assignment_01/q5.asm
+!Assignment_01/q6.asm
+!Assignment_01/q7.asm
+!Assignment_01/q8.asm
+!Assignment_01/q9.asm
+!Assignment_01/q10.asm
+
+# Assignment 02: keep only the runner and q1-q5 source files.
+!Assignment_02/
+Assignment_02/*
+!Assignment_02/run.py
+!Assignment_02/q1.asm
+!Assignment_02/q2.asm
+!Assignment_02/q3.asm
+!Assignment_02/q4.asm
+!Assignment_02/q5.asm
