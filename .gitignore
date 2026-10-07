@@ -4,6 +4,18 @@
 # Keep the repository metadata.
 !.gitignore
 
+# Keep the project folder and its contents.
+!project/
+!project/**
+/project/*.exe
+/project/*.obj
+/project/*.crf
+/project/*.lst
+/project/__pycache__/
+/project/BUILD_*.TXT
+/project/stdout.txt
+/project/stderr.txt
+
 # Assignment 01: keep only the runner and q1-q10 source files.
 !Assignment_01/
 Assignment_01/*
